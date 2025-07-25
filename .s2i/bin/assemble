@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Run the default S2I assemble script
+/usr/libexec/s2i/assemble
+
+# Train the model during build (same as Dockerfile)
+echo "Training ML model during S2I build..."
+python train.py
+echo "Model training completed!"
